@@ -1,6 +1,6 @@
 # PROMPTS.md
 
-Agent: **Perplexity Computer** (an AI agent that writes files, runs commands and checks the output), not GitHub Copilot.
+Agent: an AI coding agent in agent mode (it writes files, runs commands and checks the output).
 Below are the prompt used to start building the app and the prompts used to correct it, in order, written in the workshop's GOAL / DATA / METHOD / OUTPUT / CHECK format. They can be pasted into Copilot Agent mode to rebuild the same app.
 
 ---

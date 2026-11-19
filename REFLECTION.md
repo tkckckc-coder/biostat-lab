@@ -1,6 +1,6 @@
 # REFLECTION.md — why my app works (and where it would not)
 
-*AI-use note: this reflection was drafted with the help of an AI assistant (Perplexity Computer), then reviewed by me.*
+*AI-use note: this reflection was drafted with the help of an AI assistant, then reviewed by me.*
 
 ## Why it works
 The app works mainly because the scientific choices were made before any code was written. Michaelis–Menten kinetics is a non-linear relationship, so the correct way to estimate Vmax and Km is non-linear least squares on the measured velocities. Each point is then weighted by its real error. Lineweaver–Burk turns the curve into a straight line, but taking 1/v makes the smallest, noisiest velocities at low [S] into the largest values, and they dominate the fit. My own results show this clearly. For the inhibitor condition, Lineweaver–Burk gave Vmax = 164 when the true value was 100, while `nls()` gave 99.2 ± 3.1. Because I named the method in the prompt, the agent could not quietly choose the worse one.
