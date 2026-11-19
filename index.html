@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BioStat Kinetics — Michaelis–Menten analyser</title>
+<link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+<header>
+  <h1>BioStat Kinetics</h1>
+  <p class="sub">Fit V<sub>max</sub> and K<sub>m</sub> with real R (<code>nls()</code>) running in your browser via webR — and compare two conditions to see how an inhibitor acts.</p>
+</header>
+<main>
+  <section class="card" id="step1">
+    <h2>1 · Load data</h2>
+    <p>CSV with columns <code>condition</code>, <code>substrate_mM</code> (mM), <code>velocity</code> (µM/min). One row per well/replicate.</p>
+    <div class="row">
+      <input type="file" id="file" accept=".csv,text/csv" />
+      <button id="sample" class="secondary">Use simulated example data</button>
+    </div>
+    <p id="status" class="status">Starting R (webR)…</p>
+    <div id="preview"></div>
+  </section>
+
+  <section class="card" id="step2">
+    <h2>2 · Fit Michaelis–Menten</h2>
+    <p>Model: v = V<sub>max</sub>·[S] / (K<sub>m</sub> + [S]), fitted by non-linear least squares on the raw data — not by Lineweaver–Burk.</p>
+    <button id="run" disabled>Run analysis in R</button>
+  </section>
+
+  <section class="card hidden" id="results">
+    <h2>3 · Results</h2>
+    <div id="checks"></div>
+    <div id="table"></div>
+    <div id="interp"></div>
+    <div id="plots"></div>
+    <details open><summary>R console output</summary><pre id="console"></pre></details>
+    <details><summary>Show the R code that was run</summary><pre id="rcode"></pre></details>
+  </section>
+</main>
+<footer>Teaching tool · simulated data only · not validated for clinical or GxP use.</footer>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
