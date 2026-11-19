@@ -1,7 +1,7 @@
 # PROMPTS.md
 
-Tool: GitHub Copilot in **Agent mode**, inside a GitHub Codespace (repository `biostat-lab`).
-These are the exact prompts I copied and pasted into Copilot Chat, in order.
+Agent: **Perplexity Computer** (an AI agent that writes files, runs commands and checks the output), not GitHub Copilot.
+Below are the prompt used to start building the app and the prompts used to correct it, in order, written in the workshop's GOAL / DATA / METHOD / OUTPUT / CHECK format. They can be pasted into Copilot Agent mode to rebuild the same app.
 
 ---
 

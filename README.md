@@ -84,4 +84,4 @@ PROMPTS.md  EVALUATION.md  REFLECTION.md
 
 This is a teaching tool, used only with simulated data. It is not validated for clinical or GxP use. It assumes initial-rate data and simple Michaelis–Menten behaviour (no cooperativity and no substrate inhibition). The inhibition-type label is a suggestion based on two F-tests, so check it against the plot and your biochemical knowledge.
 
-**AI-use declaration:** an AI coding agent wrote the code under my direction, following the workshop's build → direct → verify pattern. The prompts are listed in PROMPTS.md. I chose the method, the checks and the validation design, and I verified the results against the known simulated values.
+**AI-use declaration:** the app, its code and the first drafts of these documents were produced with an AI agent (Perplexity Computer) rather than GitHub Copilot. PROMPTS.md lists the build and correction prompts. The results were checked against the known simulated values.
